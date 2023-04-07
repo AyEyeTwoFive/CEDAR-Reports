@@ -5,12 +5,12 @@ import java.time.LocalDateTime;
  *  Datetime
  */
 public class NumberOfArtifactsResult {
-  public List<Integer> templatesPerUser;
-  public List<Integer> elementsPerUser;
-  public List<Integer> fieldsPerUser;
-  public List<Integer> instancesPerUser;
-  public List<Integer> artifactsPerUser;
-  public LocalDateTime now;
+  private List<Integer> templatesPerUser;
+  private List<Integer> elementsPerUser;
+  private List<Integer> fieldsPerUser;
+  private List<Integer> instancesPerUser;
+  private List<Integer> artifactsPerUser;
+  private LocalDateTime now;
 }
 
 /** Class to generate reports for numbers of artifacts
