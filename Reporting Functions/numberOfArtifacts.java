@@ -24,7 +24,7 @@ public class numberOfArtifacts {
    * @param  folder the directory to include in analysis
    * @return List<Integer> list templatesPerUser;
    */
-  public List<Integer> getTemplatesPerUser(string folder) {
+  public List<Integer> getTemplatesPerUser(String folder) {
 
   }
 
@@ -52,7 +52,7 @@ public class numberOfArtifacts {
    * @param  folder the directory to include in analysis
    * @return List<Integer> list templatesPerUser;
    */
-  public List<Integer> getInstancesPerUser(string folder) {
+  public List<Integer> getInstancesPerUser(String folder) {
   }
 
   /**
@@ -61,7 +61,21 @@ public class numberOfArtifacts {
    * @param  folder the directory to include in analysis
    * @return List<Integer> list templatesPerUser;
    */
-  public List<Integer> getArtifactsPerUser(string folder) {
+  public List<Integer> getArtifactsPerUser(String folder) {
+  }
+
+
+
+
+  /**
+   * Main method
+   * @param  args
+   * @return none
+   */
+  public static void main (String[] args) {
+    folder = args[1];
+    JavaGet(folder);
+
   }
 
 }
