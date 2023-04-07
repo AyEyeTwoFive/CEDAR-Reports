@@ -1,2 +1,2 @@
-# CEDAR-Reports
-Generate reports for CEDAR
+# CEDAR Report
+Generate Reporting Metrics for CEDAR
