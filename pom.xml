@@ -18,6 +18,10 @@
     <url>https://github.com/metadatacenter/cedar-artifact-tools</url>
     <tag>release-2.6.23</tag>
   </scm>
+  <properties>
+    <maven.compiler.source>20</maven.compiler.source>
+    <maven.compiler.target>20</maven.compiler.target>
+  </properties>
 
   <dependencies>
 
