@@ -7,7 +7,7 @@ import java.util.List;
  *  List of templates per user
  *  Datetime
  */
-private class NumberOfArtifactsResult {
+public class NumberOfArtifactsResult {
   private List<Integer> templatesPerUser;
   private List<Integer> elementsPerUser;
   private List<Integer> fieldsPerUser;
