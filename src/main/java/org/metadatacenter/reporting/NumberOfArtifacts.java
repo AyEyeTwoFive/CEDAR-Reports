@@ -1,3 +1,4 @@
+package org.metadatacenter.reporting;
 import java.time.LocalDateTime;
 import java.util.List;
 
