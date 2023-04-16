@@ -53,7 +53,6 @@ public class JavaGet {
 
     // This line makes the request
     InputStream responseStream = connection.getInputStream();
-    System.out.println(responseStream);
 
     // Manually converting the response body InputStream to APOD using Jackson
     ObjectMapper mapper = new ObjectMapper();
