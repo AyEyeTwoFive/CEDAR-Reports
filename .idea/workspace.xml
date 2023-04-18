@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Used JsonProperty annotation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Paging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/PathInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Root.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Root.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/JavaGet.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,30 +53,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/islam/OneDrive - Stanford/Musen/CEDAR/CEDARReport&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/islam/OneDrive - Stanford/Musen/CEDAR/CEDARReport",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\islam\OneDrive - Stanford\Musen\CEDAR\CEDAR Reports\src\main\java\org\metadatacenter\reporting" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="JavaGet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GetRequest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="API_KEY" value="066bf238a8ec4235609e0b2ca0aac4b9219ec363cfff5e94bcdc4f55c56adfbb" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.JavaGet" />
+      <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.GetRequest" />
       <module name="cedar-artifact-tools" />
       <option name="PROGRAM_PARAMETERS" value="https://resource.metadatacenter.org/folders/https%3A%2F%2Frepo.metadatacenter.org%2Ffolders%2F1ee5ef41-0605-4c18-9054-b01eb4290339/contents?resource_types=template&amp;version=all&amp;publication_status=all&amp;sort=name&amp;limit=100" />
       <extension name="coverage">
@@ -93,7 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaGet" />
+        <item itemvalue="Application.GetRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +121,8 @@
       <workItem from="1681329619221" duration="5508000" />
       <workItem from="1681349889062" duration="19732000" />
       <workItem from="1681437807542" duration="866000" />
+      <workItem from="1681620633548" duration="3033000" />
+      <workItem from="1681836927311" duration="11292000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -138,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681437910677</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JavaGet compiles">
+      <created>1681620724182</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681620724182</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +168,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Moved NumberOfArtifactsResult to separate class" />
     <MESSAGE value="Error handling in JavaGet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error handling in JavaGet" />
+    <MESSAGE value="JavaGet compiles" />
+    <MESSAGE value="Added classes for jackson" />
+    <MESSAGE value="Used JsonProperty annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Used JsonProperty annotation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
