@@ -7,16 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Used JsonProperty annotation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Paging.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/PathInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Root.java" afterDir="false" />
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Root.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/JavaGet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.GetRequest" />
       <module name="cedar-artifact-tools" />
-      <option name="PROGRAM_PARAMETERS" value="https://resource.metadatacenter.org/folders/https%3A%2F%2Frepo.metadatacenter.org%2Ffolders%2F1ee5ef41-0605-4c18-9054-b01eb4290339/contents?resource_types=template&amp;version=all&amp;publication_status=all&amp;sort=name&amp;limit=100" />
+      <option name="PROGRAM_PARAMETERS" value="https://repo.metadatacenter.org/folders/7f636e7c-8d35-4c3b-bd44-b09996e534cf" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.metadatacenter.reporting.*" />
@@ -122,7 +115,7 @@
       <workItem from="1681349889062" duration="19732000" />
       <workItem from="1681437807542" duration="866000" />
       <workItem from="1681620633548" duration="3033000" />
-      <workItem from="1681836927311" duration="11292000" />
+      <workItem from="1681836927311" duration="14121000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -159,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681620724182</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Get Request working with full endpoint as command line argument">
+      <created>1681850396970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681850396970</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +171,8 @@
     <MESSAGE value="JavaGet compiles" />
     <MESSAGE value="Added classes for jackson" />
     <MESSAGE value="Used JsonProperty annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Used JsonProperty annotation" />
+    <MESSAGE value="Get Request working with full endpoint as command line argument" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get Request working with full endpoint as command line argument" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

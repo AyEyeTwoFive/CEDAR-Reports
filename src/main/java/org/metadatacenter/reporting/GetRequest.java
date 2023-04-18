@@ -36,21 +36,23 @@ public class GetRequest {
     }
 
     // Build request endpoint
-    String endpoint = "https://resource.metadatacenter.org/folders/"; 
-    // Create a neat value object to hold the URL
-    //
+    String endpoint = "https://resource.metadatacenter.org/folders/";
+    // https:%2F%2Frepo.metadatacenter.org%2Ffolders%2F1de27fa4-3743-4c56-b2df-713a27657949
     String folder;
     folder = args[0];
     String encoded_folder = URLEncoder.encode(folder);
-    endpoint = endpoint + encoded_folder; 
-    
+    endpoint = endpoint + encoded_folder;
 
+    //Add parameters
+    System.out.println(endpoint);
+    endpoint += "/contents?resource_types=template&version=all&publication_status=all&sort=name&limit=100";
 
+    //Create URL and connection
     URL url;
     HttpURLConnection connection = null;
     try {
       // Open a connection(?) on the URL(??) and cast the response(???)
-      url = new URL(folder);
+      url = new URL(endpoint);
       connection = (HttpURLConnection) url.openConnection();
       connection.setRequestMethod("GET");
       // Now it's "open", we can set the request method, headers etc.
@@ -64,7 +66,7 @@ public class GetRequest {
       System.exit(-1);
     }
 
-
+    //Check response and throw error if necessary
     int responseCode = 0;
     try {
       responseCode = connection.getResponseCode();
@@ -72,9 +74,6 @@ public class GetRequest {
       System.err.println("Error obtaining HTTP result, response code: " + responseCode + " " + e.getMessage());
       System.exit(-1);
     }
-
-    // Add API Key
-    //String user = System.getProperty("user.name");
 
     // This line makes the request
     InputStream responseStream = null;
