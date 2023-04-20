@@ -1,8 +1,12 @@
 package org.metadatacenter.reporting;
 import java.time.LocalDateTime;
+import java.util.Hashtable;
 import java.util.List;
 import org.metadatacenter.reporting.models.PathInfo;
 import org.metadatacenter.reporting.GetRequest;
+import org.metadatacenter.reporting.models.Root;
+
+import static org.metadatacenter.reporting.GetRequest.*;
 
 /** Class to generate reports for numbers of artifacts
  *
@@ -15,8 +19,9 @@ public class NumberOfArtifacts {
    * @param  folder the directory to include in analysis
    * @return List<Integer> list templatesPerUser;
    */
-  public List<Integer> getTemplatesPerUser(String folder) {
-    PathInfo pathinfo = GetRequest.Get(folder, "template");
+  public static List<Integer> getTemplatesPerUser(String folder) {
+    List<Root> authors = Get(folder, "folder");
+    System.out.println(authors);
     return null;
   }
 
@@ -61,18 +66,13 @@ public class NumberOfArtifacts {
   }
 
 
-
-
-  /**
-   * Main method
-   * @param  args
-   * @return none
+  /** Main method to generate reports for a given folder in CEDAR
+   *
+   * @param args
    */
   public static void main (String[] args) {
-    //return null;
-    //folder = args[1];
-    //JavaGet(folder);
-
+    String folder = args[0];
+    getTemplatesPerUser(folder);
   }
 
 }

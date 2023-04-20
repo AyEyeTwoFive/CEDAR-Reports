@@ -1,7 +1,6 @@
 package org.metadatacenter.reporting;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.metadatacenter.reporting.models.PathInfo;
 import org.metadatacenter.reporting.models.Root;
 
 import java.io.IOException;
@@ -10,6 +9,9 @@ import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
 
 /** Class to perform a get operation on a URL
  *  CEDAR API Key comes from environment variable
@@ -20,12 +22,14 @@ import java.net.URLEncoder;
  *   curl -X GET --header "Accept: application/json" --header "Authorization: apiKey XXX" "https://resource.metadatacenter.org/folders/https%3A%2F%2Frepo.metadatacenter.org%2Ffolders%2F1ee5ef41-0605-4c18-9054-b01eb4290339/contents?resource_types=template&version=all&publication_status=all&sort=name&limit=100" | jq '.resources[]."schema:name"'
  */
 public class GetRequest {
-  /** Perform get request on a CEDAR folder
-   * @param folder The folder to run the analysis on
+  /**
+   * Perform get request on a CEDAR folder
+   *
+   * @param folder       The folder to run the analysis on
    * @param resourceType can be "template", "folder",
    * @return pathInfo object which contains information about ownership of resources
    */
-  public static <T> PathInfo Get(String folder, String resourceType) {
+  public static List<Root> Get(String folder, String resourceType) {
 
     // First make sure we have API key
     String apiKey = null;
@@ -52,6 +56,10 @@ public class GetRequest {
     int currentOffset;
 
     Root response;
+
+    // Initialize list to store resources
+    List<Root> resources = new ArrayList<Root>();
+
     do {
 
       //Create URL and connection
@@ -110,12 +118,17 @@ public class GetRequest {
       endpoint = response.paging.last;
       currentOffset = response.currentOffset;
 
+      // Add data to dictionary
+      if (response != null) {
+        resources.add(response);
+      }
+
     }
 
     while (currentOffset > 0);
 
-    // Return the path info object which contains information about authorship
-    return response.pathinfo;
+    // Return the data
+    return resources;
 
   }
 }

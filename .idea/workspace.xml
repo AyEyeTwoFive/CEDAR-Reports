@@ -7,11 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Refactored GetRequest and javadoc comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Root.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Root.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -69,13 +68,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="GetRequest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="NumberOfArtifacts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="API_KEY" value="066bf238a8ec4235609e0b2ca0aac4b9219ec363cfff5e94bcdc4f55c56adfbb" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.GetRequest" />
+      <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.NumberOfArtifacts" />
       <module name="cedar-artifact-tools" />
-      <option name="PROGRAM_PARAMETERS" value="https://repo.metadatacenter.org/folders/7f636e7c-8d35-4c3b-bd44-b09996e534cf template 4" />
+      <option name="PROGRAM_PARAMETERS" value="https://repo.metadatacenter.org/folders/7f636e7c-8d35-4c3b-bd44-b09996e534cf" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.metadatacenter.reporting.*" />
@@ -101,7 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetRequest" />
+        <item itemvalue="Application.NumberOfArtifacts" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +121,9 @@
       <workItem from="1681861322845" duration="823000" />
       <workItem from="1681862155509" duration="5667000" />
       <workItem from="1681935346023" duration="11596000" />
-      <workItem from="1682015323508" duration="2249000" />
+      <workItem from="1682015323508" duration="8254000" />
+      <workItem from="1682031128604" duration="956000" />
+      <workItem from="1682032099900" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -187,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682013247261</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactored GetRequest and javadoc comments">
+      <created>1682021813832</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682021813832</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +212,8 @@
     <MESSAGE value="Made resource type and limit command line arguments" />
     <MESSAGE value="Put GetRequest into do while loop for pagination" />
     <MESSAGE value="Pagination seems to work with currentOffset&gt;0 as termination condition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagination seems to work with currentOffset&gt;0 as termination condition" />
+    <MESSAGE value="Refactored GetRequest and javadoc comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored GetRequest and javadoc comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -212,6 +221,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
