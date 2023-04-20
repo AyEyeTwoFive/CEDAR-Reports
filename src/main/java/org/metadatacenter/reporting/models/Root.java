@@ -17,4 +17,5 @@ public class Root{
 
   @JsonProperty("@context")
   public Context context;
+  public PathInfo pathinfo;
 }

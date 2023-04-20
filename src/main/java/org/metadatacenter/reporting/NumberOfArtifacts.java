@@ -1,6 +1,8 @@
 package org.metadatacenter.reporting;
 import java.time.LocalDateTime;
 import java.util.List;
+import org.metadatacenter.reporting.models.PathInfo;
+import org.metadatacenter.reporting.GetRequest;
 
 /** Class to generate reports for numbers of artifacts
  *
@@ -14,6 +16,7 @@ public class NumberOfArtifacts {
    * @return List<Integer> list templatesPerUser;
    */
   public List<Integer> getTemplatesPerUser(String folder) {
+    PathInfo pathinfo = GetRequest.Get(folder, "template");
     return null;
   }
 

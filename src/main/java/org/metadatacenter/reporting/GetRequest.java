@@ -1,6 +1,7 @@
 package org.metadatacenter.reporting;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.metadatacenter.reporting.models.PathInfo;
 import org.metadatacenter.reporting.models.Root;
 
 import java.io.IOException;
@@ -17,21 +18,20 @@ import java.net.URLEncoder;
  *   https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java
  *  Replicates the curl example shown below
  *   curl -X GET --header "Accept: application/json" --header "Authorization: apiKey XXX" "https://resource.metadatacenter.org/folders/https%3A%2F%2Frepo.metadatacenter.org%2Ffolders%2F1ee5ef41-0605-4c18-9054-b01eb4290339/contents?resource_types=template&version=all&publication_status=all&sort=name&limit=100" | jq '.resources[]."schema:name"'
- * Command Line Arguments:
- * 1) folder - The folder to run the analysis on
- * 2) Resource type - can be template, folder
- * 3) Limit - number of resources to return
  */
 public class GetRequest {
-
-  public static void main(String args[]) {
+  /** Perform get request on a CEDAR folder
+   * @param folder The folder to run the analysis on
+   * @param resourceType can be "template", "folder",
+   * @return pathInfo object which contains information about ownership of resources
+   */
+  public static <T> PathInfo Get(String folder, String resourceType) {
 
     // First make sure we have API key
     String apiKey = null;
     try {
       apiKey = System.getenv("API_KEY");
-    }
-    catch (SecurityException e) {
+    } catch (SecurityException e) {
       System.out.println("A security manager is preventing access to the CEDAR API Key");
     }
     if (apiKey == null) {
@@ -41,18 +41,17 @@ public class GetRequest {
     // Build request endpoint
     String endpoint = "https://resource.metadatacenter.org/folders/";
     // https:%2F%2Frepo.metadatacenter.org%2Ffolders%2F1de27fa4-3743-4c56-b2df-713a27657949
-    String folder;
-    folder = args[0];
     String encoded_folder = URLEncoder.encode(folder);
     endpoint = endpoint + encoded_folder;
 
     //Add parameters
     //System.out.println(endpoint);
-    endpoint += "/contents?resource_types=" + args[1] + "&version=all&publication_status=all&sort=name&limit=" + args[2];
+    endpoint += "/contents?resource_types=" + resourceType + "&version=all&publication_status=all&sort=name&limit=100";
 
     int totalCount;
     int currentOffset;
 
+    Root response;
     do {
 
       //Create URL and connection
@@ -94,7 +93,7 @@ public class GetRequest {
 
       // Manually converting the response body InputStream to Java class using Jackson
       ObjectMapper mapper = new ObjectMapper();
-      Root response = null;
+      response = null;
       try {
         response = mapper.readValue(responseStream, Root.class);
       } catch (IOException e) {
@@ -114,6 +113,9 @@ public class GetRequest {
     }
 
     while (currentOffset > 0);
+
+    // Return the path info object which contains information about authorship
+    return response.pathinfo;
 
   }
 }
