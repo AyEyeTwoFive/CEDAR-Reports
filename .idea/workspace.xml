@@ -7,10 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Made resource type and limit command line arguments">
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Paging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/models/Paging.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/islam/OneDrive - Stanford/Musen/CEDAR/CEDARReport&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/islam/OneDrive - Stanford/Musen/CEDAR/CEDARReport",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\islam\OneDrive - Stanford\Musen\CEDAR\CEDAR Reports\src\main\java\org\metadatacenter\reporting" />
@@ -119,7 +119,7 @@
       <workItem from="1681836927311" duration="14440000" />
       <workItem from="1681861322845" duration="823000" />
       <workItem from="1681862155509" duration="5667000" />
-      <workItem from="1681935346023" duration="4790000" />
+      <workItem from="1681935346023" duration="9341000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -170,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681858790573</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Put GetRequest into do while loop for pagination">
+      <created>1681954507563</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681954507563</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +192,8 @@
     <MESSAGE value="Get Request working with full endpoint as command line argument" />
     <MESSAGE value="Get Request working with unencoded folder URL as command line argument and returning all templates" />
     <MESSAGE value="Made resource type and limit command line arguments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made resource type and limit command line arguments" />
+    <MESSAGE value="Put GetRequest into do while loop for pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put GetRequest into do while loop for pagination" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

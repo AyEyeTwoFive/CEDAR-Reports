@@ -14,8 +14,8 @@ import java.net.URLEncoder;
  *  CEDAR API Key comes from environment variable
  *  CEDAR folder to run analytics on is passed in as a command line argument
  *  Use the twilio example to open an HTTP Connection
- *  Replicates the curl example shown below
  *   https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java
+ *  Replicates the curl example shown below
  *   curl -X GET --header "Accept: application/json" --header "Authorization: apiKey XXX" "https://resource.metadatacenter.org/folders/https%3A%2F%2Frepo.metadatacenter.org%2Ffolders%2F1ee5ef41-0605-4c18-9054-b01eb4290339/contents?resource_types=template&version=all&publication_status=all&sort=name&limit=100" | jq '.resources[]."schema:name"'
  * Command Line Arguments:
  * 1) folder - The folder to run the analysis on
@@ -51,6 +51,7 @@ public class GetRequest {
     endpoint += "/contents?resource_types=" + args[1] + "&version=all&publication_status=all&sort=name&limit=" + args[2];
 
     int totalCount;
+    int currentOffset;
 
     do {
 
@@ -91,7 +92,7 @@ public class GetRequest {
         System.exit(-1);
       }
 
-      // Manually converting the response body InputStream to APOD using Jackson
+      // Manually converting the response body InputStream to Java class using Jackson
       ObjectMapper mapper = new ObjectMapper();
       Root response = null;
       try {
@@ -104,14 +105,15 @@ public class GetRequest {
       System.out.println("Total count: " + response.totalCount);
       System.out.println("Current offset: " + response.currentOffset);
       System.out.println("First page: " + response.paging.first);
-      System.out.println("Last page" + ": " + response.paging.last);
+      System.out.println("Last page: " + response.paging.last);
 
       totalCount = response.totalCount;
       endpoint = response.paging.last;
+      currentOffset = response.currentOffset;
 
     }
 
-    while (totalCount > 0);
+    while (currentOffset > 0);
 
   }
 }
