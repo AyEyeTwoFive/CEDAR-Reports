@@ -20,8 +20,13 @@ public class NumberOfArtifacts {
    * @return List<Integer> list templatesPerUser;
    */
   public static List<Integer> getTemplatesPerUser(String folder) {
-    List<Root> authors = Get(folder, "folder");
-    System.out.println(authors);
+    List<Root> folders = Get(folder, "folder");
+    Hashtable<String, String> idsAndAuthors = new Hashtable<String, String>();
+    for (Root f: folders) {
+      for (PathInfo p : f.pathInfo) {
+        idsAndAuthors.put(p.id, p.pav_createdBy);
+      }
+    }
     return null;
   }
 
