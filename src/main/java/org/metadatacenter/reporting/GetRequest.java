@@ -125,7 +125,8 @@ public class GetRequest {
 
     }
 
-    while (currentOffset > 0);
+    //while (currentOffset > 0);
+    while (response.paging.next != null);
 
     // Return the data
     return resources;

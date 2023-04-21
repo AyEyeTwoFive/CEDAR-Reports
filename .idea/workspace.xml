@@ -9,6 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +124,8 @@
       <workItem from="1682015323508" duration="8254000" />
       <workItem from="1682031128604" duration="956000" />
       <workItem from="1682032099900" duration="554000" />
-      <workItem from="1682032669064" duration="3341000" />
+      <workItem from="1682032669064" duration="4160000" />
+      <workItem from="1682109241742" duration="1241000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682035772367</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Started getTemplatesPerUser and asked Atti about termination condition for GetRequest">
+      <created>1682037504130</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682037504130</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +238,8 @@
     <MESSAGE value="Refactored GetRequest and javadoc comments" />
     <MESSAGE value="Changed GetRequest back to return list of resources" />
     <MESSAGE value="Using list of folders from Get to analyze in NumberOfArtifacts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Using list of folders from Get to analyze in NumberOfArtifacts" />
+    <MESSAGE value="Started getTemplatesPerUser and asked Atti about termination condition for GetRequest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started getTemplatesPerUser and asked Atti about termination condition for GetRequest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,6 @@
 package org.metadatacenter.reporting;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import org.metadatacenter.reporting.models.PathInfo;
@@ -27,6 +28,7 @@ public class NumberOfArtifacts {
         idsAndAuthors.put(p.id, p.pav_createdBy);
       }
     }
+    List<Integer> authorCounts = new ArrayList<Integer>();
     return null;
   }
 
