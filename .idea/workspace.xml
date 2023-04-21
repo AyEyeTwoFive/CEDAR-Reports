@@ -7,10 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Refactored GetRequest and javadoc comments">
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +122,7 @@
       <workItem from="1682015323508" duration="8254000" />
       <workItem from="1682031128604" duration="956000" />
       <workItem from="1682032099900" duration="554000" />
+      <workItem from="1682032669064" duration="1686000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -195,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682021813832</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changed GetRequest back to return list of resources">
+      <created>1682032934563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682032934563</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +219,8 @@
     <MESSAGE value="Put GetRequest into do while loop for pagination" />
     <MESSAGE value="Pagination seems to work with currentOffset&gt;0 as termination condition" />
     <MESSAGE value="Refactored GetRequest and javadoc comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored GetRequest and javadoc comments" />
+    <MESSAGE value="Changed GetRequest back to return list of resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed GetRequest back to return list of resources" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -226,7 +233,17 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="response.pathInfo.get(2)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
