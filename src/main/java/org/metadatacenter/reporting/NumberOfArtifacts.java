@@ -50,45 +50,6 @@ public class NumberOfArtifacts {
     return counts;
   }
 
-  /**
-   * Returns a list of number of templates per user sorted in decreasing order
-   * of the number of templates the user has produced, along with a timestamp.
-   * @param  folder the directory to include in analysis
-   * @return List<Integer> list templatesPerUser;
-   */
-  public List<Integer> getElementsPerUser(String folder) {
-    return null;
-  }
-
-  /**
-   * Returns a list of number of templates per user sorted in decreasing order
-   * of the number of templates the user has produced, along with a timestamp.
-   * @param  folder the directory to include in analysis
-   * @return List<Integer> list templatesPerUser;
-   */
-  public List<Integer> getFieldsPerUser(String folder) {
-    return null;
-  }
-
-  /**
-   * Returns a list of number of templates per user sorted in decreasing order
-   * of the number of templates the user has produced, along with a timestamp.
-   * @param  folder the directory to include in analysis
-   * @return List<Integer> list templatesPerUser;
-   */
-  public List<Integer> getInstancesPerUser(String folder) {
-    return null;
-  }
-
-  /**
-   * Returns a list of number of templates per user sorted in decreasing order
-   * of the number of templates the user has produced, along with a timestamp.
-   * @param  folder the directory to include in analysis
-   * @return List<Integer> list templatesPerUser;
-   */
-  public List<Integer> getArtifactsPerUser(String folder) {
-    return null;
-  }
 
 
   /** Main method to generate reports for a given folder in CEDAR
@@ -97,7 +58,15 @@ public class NumberOfArtifacts {
    */
   public static void main (String[] args) {
     String folder = args[0];
-    getResourcesPerUser(folder, "template");
+    List<Integer> templatesPerUser = getResourcesPerUser(folder, "template");
+    List<Integer> elementsPerUser = getResourcesPerUser(folder, "element");
+    List<Integer> fieldsPerUser = getResourcesPerUser(folder, "field");
+    List<Integer> instancesPerUser = getResourcesPerUser(folder, "instance");
+    List<Integer> artifactsPerUser = getResourcesPerUser(folder, "artifact");
+
+
+
+
   }
 
 }

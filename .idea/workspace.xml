@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" afterDir="false" />
     </list>
@@ -124,7 +124,7 @@
       <workItem from="1682031128604" duration="956000" />
       <workItem from="1682032099900" duration="554000" />
       <workItem from="1682032669064" duration="4160000" />
-      <workItem from="1682109241742" duration="6037000" />
+      <workItem from="1682109241742" duration="11225000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682110659326</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter">
+      <created>1682133723450</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682133723450</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +253,8 @@
     <MESSAGE value="Using list of folders from Get to analyze in NumberOfArtifacts" />
     <MESSAGE value="Started getTemplatesPerUser and asked Atti about termination condition for GetRequest" />
     <MESSAGE value="After talking to Atti, changed GetRequest termination condition to null paging.next" />
-    <option name="LAST_COMMIT_MESSAGE" value="After talking to Atti, changed GetRequest termination condition to null paging.next" />
+    <MESSAGE value="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
