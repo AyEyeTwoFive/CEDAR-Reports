@@ -128,6 +128,11 @@ public class GetRequest {
     //while (currentOffset > 0);
     while (response.paging.next != null);
 
+    // Recursively add folders
+    int prevLen = 0;
+
+
+
     // Return the data
     return resources;
 

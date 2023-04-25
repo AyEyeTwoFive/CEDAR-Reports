@@ -65,8 +65,6 @@ public class NumberOfArtifacts {
     List<Integer> artifactsPerUser = getResourcesPerUser(folder, "artifact");
 
 
-
-
   }
 
 }

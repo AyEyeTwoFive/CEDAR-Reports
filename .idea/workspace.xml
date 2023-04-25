@@ -7,8 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter">
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/metadatacenter/reporting/NumberOfArtifactsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -46,24 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/islam/OneDrive - Stanford/Musen/CEDAR/CEDARReport&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/islam/OneDrive - Stanford/Musen/CEDAR/CEDARReport",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\islam\OneDrive - Stanford\Musen\CEDAR\CEDAR Reports\src\main\java\org\metadatacenter\reporting" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.metadatacenter.reporting" />
     </key>
   </component>
   <component name="RunManager">
@@ -73,7 +85,7 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.NumberOfArtifacts" />
       <module name="cedar-artifact-tools" />
-      <option name="PROGRAM_PARAMETERS" value="https://repo.metadatacenter.org/folders/7f636e7c-8d35-4c3b-bd44-b09996e534cf" />
+      <option name="PROGRAM_PARAMETERS" value="https://repo.metadatacenter.org/folders/1de27fa4-3743-4c56-b2df-713a27657949" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.metadatacenter.reporting.*" />
@@ -124,7 +136,7 @@
       <workItem from="1682031128604" duration="956000" />
       <workItem from="1682032099900" duration="554000" />
       <workItem from="1682032669064" duration="4160000" />
-      <workItem from="1682109241742" duration="11225000" />
+      <workItem from="1682109241742" duration="27243000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -231,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682133723450</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Starting main method of number of artifacts class">
+      <created>1682318182409</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682318182409</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +273,8 @@
     <MESSAGE value="Started getTemplatesPerUser and asked Atti about termination condition for GetRequest" />
     <MESSAGE value="After talking to Atti, changed GetRequest termination condition to null paging.next" />
     <MESSAGE value="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter" />
+    <MESSAGE value="Starting main method of number of artifacts class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting main method of number of artifacts class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -268,9 +288,24 @@
           <option name="timeStamp" value="2" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="4" />
+          <line>136</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
