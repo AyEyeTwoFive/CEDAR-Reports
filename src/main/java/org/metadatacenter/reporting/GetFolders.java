@@ -1,6 +1,7 @@
 package org.metadatacenter.reporting;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.metadatacenter.reporting.models.Root;
 
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class GetFolders {
    * @param resourceType can be "template", "folder",
    * @return pathInfo object which contains information about ownership of resources
    */
-  public static List<Root> Get(String folder, String resourceType) {
+  public static List<Root> Get(String folder, String resourceType) throws IOException {
 
     // First make sure we have API key
     String apiKey = null;
@@ -98,34 +99,53 @@ public class GetFolders {
         System.exit(-1);
       }
 
+      // print inputstream
+//      byte[] buffer = new byte[1024];
+//      int bytesRead;
+//      while ((bytesRead = responseStream.read(buffer)) != -1) {
+//        System.out.println(new String(buffer, 0, bytesRead));
+//      }
+//      ObjectMapper printMapper = new ObjectMapper();
+//      printMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+//      String prettyJson = printMapper.writeValueAsString(printMapper.readValue(responseStream, Object.class));
+//      System.out.println(prettyJson);
+
+
       // Manually converting the response body InputStream to Java class using Jackson
       ObjectMapper mapper = new ObjectMapper();
       response = null;
       try {
         response = mapper.readValue(responseStream, Root.class);
       } catch (IOException e) {
-        System.out.println("IO Error when deserializing response: " + e.getMessage());
+        if (e.getMessage().contains("No content to map")) { // nothing to do
+          ;
+        }
+        else {
+          System.out.println("IO Error when deserializing response: " + e.getMessage());
+        }
       }
 
-      // Finally we have the response
-      System.out.println("Total count: " + response.totalCount);
-      System.out.println("Current offset: " + response.currentOffset);
-      System.out.println("First page: " + response.paging.first);
-      System.out.println("Last page: " + response.paging.last);
-
-      totalCount = response.totalCount;
-      endpoint = response.paging.last;
-      currentOffset = response.currentOffset;
 
       // Add data to dictionary
       if (response != null) {
+
+//        // Print out details
+//        System.out.println("Total count: " + response.totalCount);
+//        System.out.println("Current offset: " + response.currentOffset);
+//        System.out.println("First page: " + response.paging.first);
+//        System.out.println("Last page: " + response.paging.last);
+
+        // Save to response variable
+        totalCount = response.totalCount;
+        endpoint = response.paging.last;
+        currentOffset = response.currentOffset;
         folders.add(response);
       }
 
     }
 
     //while (currentOffset > 0);
-    while (response.paging.next != null);
+    while (response != null && response.paging.next != null);
 
     // Recursively add folders
 //    int prevLen = 0;
@@ -135,8 +155,6 @@ public class GetFolders {
 //        folders = folders + addFolders;
 //      }
 //    }
-
-
 
     // Return the data
     return folders;

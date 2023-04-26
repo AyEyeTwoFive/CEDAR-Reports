@@ -7,11 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="9c5df785-56d2-42e4-b4ca-b8e0745bc800" name="Changes" comment="working to fix GetFolders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetFolders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetFolders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetFolders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/metadatacenter/reporting/NumberOfArtifactsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/metadatacenter/reporting/NumberOfArtifactsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/metadatacenter/reporting/GetRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/metadatacenter/reporting/NumberOfArtifacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/metadatacenter/reporting/NumberOfArtifacts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/metadatacenter/reporting/NumberOfArtifactsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/metadatacenter/reporting/NumberOfArtifactsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,7 @@
       <recent name="org.metadatacenter.reporting" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.NumberOfArtifactsTest.getResourcesPerUser">
     <configuration name="NumberOfArtifacts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="API_KEY" value="066bf238a8ec4235609e0b2ca0aac4b9219ec363cfff5e94bcdc4f55c56adfbb" />
@@ -95,6 +98,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NumberOfArtifactsTest.getResourcesPerUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cedar-artifact-tools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.metadatacenter.reporting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.metadatacenter.reporting" />
+      <option name="MAIN_CLASS_NAME" value="org.metadatacenter.reporting.NumberOfArtifactsTest" />
+      <option name="METHOD_NAME" value="getResourcesPerUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="CEDAR Reports" />
       <method v="2">
@@ -108,8 +127,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.NumberOfArtifacts" />
+      <item itemvalue="JUnit.NumberOfArtifactsTest.getResourcesPerUser" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NumberOfArtifactsTest.getResourcesPerUser" />
         <item itemvalue="Application.NumberOfArtifacts" />
       </list>
     </recent_temporary>
@@ -135,7 +159,7 @@
       <workItem from="1682031128604" duration="956000" />
       <workItem from="1682032099900" duration="554000" />
       <workItem from="1682032669064" duration="4160000" />
-      <workItem from="1682109241742" duration="30774000" />
+      <workItem from="1682109241742" duration="42781000" />
     </task>
     <task id="LOCAL-00001" summary="Moved NumberOfArtifactsResult to separate class">
       <created>1681330485835</created>
@@ -263,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682456356615</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="trying to recursively add folders in getfoldres">
+      <created>1682468909406</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682468909406</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +319,9 @@
     <MESSAGE value="Refactored GetResourcesPerUser to be more flexible and accept resource type parameter" />
     <MESSAGE value="Starting main method of number of artifacts class" />
     <MESSAGE value="number of artifacts test" />
-    <option name="LAST_COMMIT_MESSAGE" value="number of artifacts test" />
+    <MESSAGE value="trying to recursively add folders in getfoldres" />
+    <MESSAGE value="working to fix GetFolders" />
+    <option name="LAST_COMMIT_MESSAGE" value="working to fix GetFolders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -302,19 +335,9 @@
           <option name="timeStamp" value="2" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/GetFolders.java</url>
-          <line>136</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/metadatacenter/reporting/NumberOfArtifacts.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="40" />
+          <line>24</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

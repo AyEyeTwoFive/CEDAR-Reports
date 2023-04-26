@@ -1,4 +1,5 @@
 package org.metadatacenter.reporting;
+import java.io.IOException;
 import java.util.*;
 
 import org.metadatacenter.reporting.models.PathInfo;
@@ -19,7 +20,7 @@ public class NumberOfArtifacts {
    *                     can be "template", "element", "field", "instance", or "artifact"
    * @return List<Integer> list templatesPerUser;
    */
-  public static List<Integer> getResourcesPerUser(String folder, String resourceType) {
+  public static List<Integer> getResourcesPerUser(String folder, String resourceType) throws IOException {
     List<Root> folders = Get(folder, "folder");
     Hashtable<String, String> idsAndAuthors = new Hashtable<String, String>();
     for (Root f: folders) {        // loop through folders
@@ -54,7 +55,7 @@ public class NumberOfArtifacts {
    *
    * @param args
    */
-  public static void main (String[] args) {
+  public static void main (String[] args) throws IOException {
     String folder = args[0];
     List<Integer> templatesPerUser = getResourcesPerUser(folder, "template");
     List<Integer> elementsPerUser = getResourcesPerUser(folder, "element");
