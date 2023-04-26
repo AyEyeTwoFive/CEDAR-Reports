@@ -10,7 +10,6 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 
 /** Class to perform a get operation on a URL
@@ -21,7 +20,7 @@ import java.util.List;
  *  Replicates the curl example shown below
  *   curl -X GET --header "Accept: application/json" --header "Authorization: apiKey XXX" "https://resource.metadatacenter.org/folders/https%3A%2F%2Frepo.metadatacenter.org%2Ffolders%2F1ee5ef41-0605-4c18-9054-b01eb4290339/contents?resource_types=template&version=all&publication_status=all&sort=name&limit=100" | jq '.resources[]."schema:name"'
  */
-public class GetRequest {
+public class GetFolders {
   /**
    * Perform get request on a CEDAR folder
    *
@@ -57,8 +56,8 @@ public class GetRequest {
 
     Root response;
 
-    // Initialize list to store resources
-    List<Root> resources = new ArrayList<Root>();
+    // Initialize list to store folders
+    List<Root> folders = new ArrayList<Root>();
 
     do {
 
@@ -120,7 +119,7 @@ public class GetRequest {
 
       // Add data to dictionary
       if (response != null) {
-        resources.add(response);
+        folders.add(response);
       }
 
     }
@@ -129,12 +128,18 @@ public class GetRequest {
     while (response.paging.next != null);
 
     // Recursively add folders
-    int prevLen = 0;
+//    int prevLen = 0;
+//    while (folders.size() > prevLen) {
+//      for (Root f : folders) {        // loop through folders
+//        Object addFolders = f.listFiles();
+//        folders = folders + addFolders;
+//      }
+//    }
 
 
 
     // Return the data
-    return resources;
+    return folders;
 
   }
 }

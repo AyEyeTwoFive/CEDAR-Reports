@@ -1,12 +1,10 @@
 package org.metadatacenter.reporting;
-import java.time.LocalDateTime;
 import java.util.*;
 
 import org.metadatacenter.reporting.models.PathInfo;
-import org.metadatacenter.reporting.GetRequest;
 import org.metadatacenter.reporting.models.Root;
 
-import static org.metadatacenter.reporting.GetRequest.*;
+import static org.metadatacenter.reporting.GetFolders.*;
 
 /** Class to generate reports for numbers of artifacts
  *
