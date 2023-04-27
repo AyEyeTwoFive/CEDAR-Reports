@@ -5,6 +5,10 @@ import java.util.*;
 import org.metadatacenter.reporting.models.PathInfo;
 import org.metadatacenter.reporting.models.Root;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import static org.metadatacenter.reporting.GetFolders.*;
 
 /** Class to generate reports for numbers of artifacts
@@ -24,7 +28,7 @@ public class NumberOfArtifacts {
     List<Root> folders = Get(folder, "folder");
     Hashtable<String, String> idsAndAuthors = new Hashtable<String, String>();
     for (Root f: folders) {        // loop through folders
-      for (PathInfo p : f.pathInfo) {  // loop through content within folders
+      for (PathInfo p : GetFolderContents(f)) {  // loop through content within folders
         if (p.resourceType == resourceType) {     // if resource is the type of interest
           idsAndAuthors.put(p.id, p.pav_createdBy);  // add to dictionary
         }
