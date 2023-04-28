@@ -2,7 +2,7 @@ package org.metadatacenter.reporting.models;
 
 import java.util.ArrayList;
 
-public class Request{
+public class Request {
   public String version;
   public String publicationStatus;
   public int limit;
