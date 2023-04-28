@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-public class Root{
+public class Root {
   public Request request;
   public int totalCount;
   public int currentOffset;
