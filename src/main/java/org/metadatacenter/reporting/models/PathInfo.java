@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
-public class PathInfo {
+public class PathInfo{
   public String resourceType;
   public boolean activeUserCanRead;
   public String everybodyPermission;
