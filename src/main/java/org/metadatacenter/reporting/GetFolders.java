@@ -26,10 +26,9 @@ public class GetFolders {
    * Perform get request on a CEDAR folder
    *
    * @param folder       The folder to run the analysis on
-   * @param resourceType can be "template", "folder",
    * @return pathInfo object which contains information about ownership of resources
    */
-  public static List<Root> Get(String folder, String resourceType) throws IOException {
+  public static List<Root> Get(String folder) throws IOException {
 
     // First make sure we have API key
     String apiKey = null;
@@ -50,7 +49,7 @@ public class GetFolders {
 
     //Add parameters
     //System.out.println(endpoint);
-    endpoint += "/contents?resource_types=" + resourceType + "&version=all&publication_status=all&sort=name&limit=100";
+    endpoint += "/contents?resource_types=folder" + "&version=all&publication_status=all&sort=name&limit=100";
 
     int totalCount;
     int currentOffset;
